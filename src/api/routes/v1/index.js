@@ -10,8 +10,9 @@ const router = express.Router();
  */
 router.use('/docs', express.static('docs'));
 
-router.use('/auth', authRoutes);
 router.use('/', healthRoutes);
+
+router.use('/auth', authRoutes);
 router.use('/users', userRoutes);
 
 module.exports = router;

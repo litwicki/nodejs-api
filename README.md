@@ -8,6 +8,10 @@ NodeJS API template scaffolding.
  - [Docker](https://www.docker.com/)
  - [Yarn](https://yarnpkg.com/en/docs/install)
 
+### Node Modules
+
+  npm install -g mongoose-data-seed nodemon
+
 ## Getting Started
 
 Install dependencies:

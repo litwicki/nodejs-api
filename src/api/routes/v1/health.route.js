@@ -9,7 +9,7 @@ const router = express.Router();
 router
   .route('/ping')
   /**
-   * @api {get} v1/ping Ping
+   * @api {get} /ping Ping
    * @apiDescription Simple application health check
    * @apiVersion 1.0.0
    * @apiName Health - Simple
@@ -25,7 +25,7 @@ router
 router
   .route('/health')
   /**
-   * @api {get} v1/health Health
+   * @api {get} /health Health
    * @apiDescription Deep application health check
    * @apiVersion 1.0.0
    * @apiName Health - Deep

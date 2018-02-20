@@ -40,12 +40,10 @@ app.use(cors());
 // enable authentication
 app.use(passport.initialize());
 passport.use('jwt', strategies.jwt);
-passport.use('facebook', strategies.facebook);
 passport.use('google', strategies.google);
-passport.use('github', strategies.github);
 
 // mount api v1 routes
-app.use('/v1', routes);
+app.use('/api/v1', routes);
 
 // if error is not an instanceOf APIError, convert it.
 app.use(error.converter);

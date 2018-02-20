@@ -12,7 +12,7 @@ const {
 const router = express.Router();
 
 /**
- * @api {post} v1/auth/register Register
+ * @api {post} /auth/register Register
  * @apiDescription Register a new user
  * @apiVersion 1.0.0
  * @apiName Register
@@ -43,7 +43,7 @@ router.route('/register')
 
 
 /**
- * @api {post} v1/auth/login Login
+ * @api {post} /auth/login Login
  * @apiDescription Get an accessToken
  * @apiVersion 1.0.0
  * @apiName Login
@@ -74,7 +74,7 @@ router.route('/login')
 
 
 /**
- * @api {post} v1/auth/refresh-token Refresh Token
+ * @api {post} /auth/refresh-token Refresh Token
  * @apiDescription Refresh expired accessToken
  * @apiVersion 1.0.0
  * @apiName RefreshToken
@@ -97,11 +97,11 @@ router.route('/refresh-token')
 
 
 /**
- * TODO: POST /v1/auth/reset-password
+ * TODO: POST //auth/reset-password
  */
 
 /**
- * @api {post} v1/auth/google Google Login
+ * @api {post} /auth/google Google Login
  * @apiDescription Login with google. Creates a new user if it does not exist
  * @apiVersion 1.0.0
  * @apiName GoogleLogin
@@ -120,26 +120,5 @@ router.route('/refresh-token')
  */
 router.route('/google')
   .post(validate(oAuth), oAuthLogin('google'), controller.oAuth);
-
-/**
- * @api {post} v1/auth/github Github Login
- * @apiDescription Login with github. Creates a new user if it does not exist
- * @apiVersion 1.0.0
- * @apiName GithubLogin
- * @apiGroup Auth
- * @apiPermission public
- *
- * @apiParam  {String}  access_token  Github's access_token
- *
- * @apiSuccess {String}  tokenType     Access Token's type
- * @apiSuccess {String}  accessToken   Authorization Token
- * @apiSuccess {String}  refreshToken  Token to get a new accpessToken after expiration time
- * @apiSuccess {Number}  expiresIn     Access Token's expiration time in miliseconds
- *
- * @apiError (Bad Request 400)  ValidationError  Some parameters may contain invalid values
- * @apiError (Unauthorized 401)  Unauthorized    Incorrect access_token
- */
-router.route('/github')
-  .post(validate(oAuth), oAuthLogin('github'), controller.oAuth);
 
 module.exports = router;

@@ -16,19 +16,3 @@ exports.google = async (access_token) => {
     email,
   };
 };
-
-exports.github = async (access_token) => {
-  const url = 'https://github.com/login/oauth/access_token';
-  const params = { access_token };
-  const response = await axios.get(url, { params });
-  const {
-    sub, name, email, picture,
-  } = response.data;
-  return {
-    service: 'google',
-    picture,
-    id: sub,
-    name,
-    email,
-  };
-};
