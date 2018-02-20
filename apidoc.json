@@ -1,0 +1,12 @@
+{
+  "name": "nodejs-api-docs",
+  "version": "1.0.0",
+  "description": "nodejs-api example project",
+  "title": "NodeJS API Documentation",
+  "url": "https://api.github.com/v1",
+  "sampleUrl": "https://api.github.com/v1",
+  "template": {
+    "withCompare": true,
+    "withGenerator": true
+  }
+}
