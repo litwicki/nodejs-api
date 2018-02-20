@@ -142,5 +142,4 @@ router.route('/google')
 router.route('/github')
   .post(validate(oAuth), oAuthLogin('github'), controller.oAuth);
 
-
 module.exports = router;
