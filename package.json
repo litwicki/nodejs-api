@@ -76,6 +76,7 @@
     "helmet": "^3.11.0",
     "http-status": "^1.0.1",
     "joi": "^13.1.2",
+    "joi-password-complexity": "^2.0.1",
     "jwt-simple": "^0.5.1",
     "lodash": "^4.17.5",
     "method-override": "^2.3.10",

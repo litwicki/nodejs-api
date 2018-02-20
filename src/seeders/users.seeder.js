@@ -5,6 +5,11 @@ const faker = require('faker');
 const data = [];
 let i = 0;
 
+data.push({
+  email: 'admin@example.com',
+  password: 'Password1!',
+});
+
 for (i = 0; i < 10; i += 1) {
   data.push({
     email: faker.internet.email(),
