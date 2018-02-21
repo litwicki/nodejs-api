@@ -1,7 +1,7 @@
 {
-  "name": "camelothub-api",
+  "name": "nodejs-api",
   "version": "1.0.0",
-  "description": "CamelotHub API",
+  "description": "NodeJS API",
   "author": "Jake Litwicki <jake.litwicki@gmail.com>",
   "main": "src/index.js",
   "private": false,
