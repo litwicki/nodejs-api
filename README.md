@@ -10,7 +10,9 @@ NodeJS API template scaffolding.
 
 ### Node Modules
 
-  npm install -g mongoose-data-seed nodemon
+```bash
+npm install -g mongoose-data-seed nodemon
+```
 
 ## Getting Started
 
