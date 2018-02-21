@@ -2,16 +2,18 @@ version: "2"
 services:
   nodejs-api:
     build: .
+    container_name: nodejs_api
     environment:
       - MONGO_URI=${MONGO_URI}
     volumes:
       - .:/app
     ports:
-      - "3000:3000"
+      - "${PORT}:${PORT}"
     depends_on:
       - mongodb
 
   mongodb:
     image: mongo
+    container_name: mongodb
     ports:
       - "27017:27017"
