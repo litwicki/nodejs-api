@@ -6,6 +6,7 @@ NodeJS API template scaffolding.
 
  - [Node v7.6+](https://nodejs.org/en/download/current/)
  - [Docker](https://www.docker.com/)
+ - [Docker Compose](https://docs.docker.com/compose/install/)
  - [Yarn](https://yarnpkg.com/en/docs/install)
 
 ### Node Modules
@@ -13,7 +14,22 @@ NodeJS API template scaffolding.
 ```bash
 npm install -g mongoose-data-seed nodemon
 ```
+### MongoDB Client
+You have multiple options, but two I prefer are here:
 
+#### Robo Desktop Client
+Download the [Robo 3T Client](https://robomongo.org/download)
+#### Mongoclient Docker Container
+Use the [NOSQL Client](https://www.nosqlclient.com/docs/start.html#docker).
+
+```bash
+docker run -d -p 8080:8080 \
+-v  data:/data/db \
+-e MONGO_URL=mongodb://mongodb/nodejsapi \
+mongoclient/mongoclient
+```
+
+Then access the client as a web app [http://localhost:3100](http://localhost:3100)
 ## Getting Started
 
 Install dependencies:
