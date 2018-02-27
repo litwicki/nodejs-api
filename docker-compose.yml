@@ -4,16 +4,16 @@ services:
     build: .
     container_name: nodejs_api
     environment:
-      - MONGO_URI=${MONGO_URI}
+      - DB_URI=${DB_URI}
     volumes:
       - .:/app
     ports:
       - "${PORT}:${PORT}"
     depends_on:
-      - mongodb
+      - postgres
 
-  mongodb:
-    image: mongo
-    container_name: mongodb
+  postgres:
+    image: postgres
+    container_name: postgres
     ports:
-      - "27017:27017"
+      - "54312:54312"
