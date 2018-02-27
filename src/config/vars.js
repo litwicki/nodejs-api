@@ -1,10 +1,13 @@
 const path = require('path');
+const url = require('url');
 
 // import .env variables
 require('dotenv-safe').load({
   path: path.join(__dirname, '../../.env'),
   sample: path.join(__dirname, '../../.env.example'),
 });
+
+const dbUri = new url(process.env.DB_URI);
 
 module.exports = {
   env: process.env.NODE_ENV,
@@ -17,4 +20,12 @@ module.exports = {
       : process.env.MONGO_URI,
   },
   logs: process.env.NODE_ENV === 'production' ? 'combined' : 'dev',
+  db: {
+    host: dbUri.host,
+    hostname: dbUri.hostname,
+    password: dbUri.password,
+    port: dbUri.port,
+    protocol: dbUri.protocol,
+    username: dbUri.username,
+  },
 };
