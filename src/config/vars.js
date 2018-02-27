@@ -23,6 +23,7 @@ module.exports = {
   db: {
     host: dbUri.host,
     hostname: dbUri.hostname,
+    dbname: '', //@TODO
     password: dbUri.password,
     port: dbUri.port,
     protocol: dbUri.protocol,
