@@ -88,7 +88,7 @@
     "method-override": "^2.3.10",
     "moment-timezone": "^0.5.14",
     "mongoose": "^5.0.6",
-    "mongoose-data-seed": "^1.0.4",
+    "mongoose-data-seed": "^2.1.6",
     "morgan": "^1.9.0",
     "ora": "^1.4.0",
     "passport": "^0.4.0",
