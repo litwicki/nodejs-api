@@ -95,7 +95,7 @@
     "passport-github": "^1.1.0",
     "passport-github-token": "^2.1.0",
     "passport-http-bearer": "^1.0.1",
-    "passport-jwt": "^3.0.1",
+    "passport-jwt": "^4.0.1",
     "pm2": "^2.10.0",
     "uuid": "^3.2.1"
   },
